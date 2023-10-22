@@ -1,4 +1,4 @@
-#Parcial de Sistema de Procesamiento de datos: 
+# Parcial de Sistema de Procesamiento de datos: 
 
 ## :white_check_mark: Descripción
 El parcial consta de 3 partes:
