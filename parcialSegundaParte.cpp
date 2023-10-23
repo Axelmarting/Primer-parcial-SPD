@@ -74,33 +74,14 @@ void loop()
     
     if(interruptor == 1)
     {
-      //Reinicio los contadores del otro valor del interruptor
+      //Reinicio los contadores primos.
       num1=0;
       num2=0;
-
-      //Apaga los led para que no se superpongan
-      //Enciende el display decena(izquierda)
-      //Muestra el numero del contador de decena
-      //y apaga el display
-      apagado();
-      digitalWrite(decena, HIGH);
-      mostrarNumero(contadorD);
-      delay(250);
-      digitalWrite(decena, LOW);
-
-      //Apaga los led para que no se superpongan
-      //Enciende el display unidad(derecha)
-      //Muestra el numero del contador de unidad
-      //y apaga el display
-      apagado();
-      digitalWrite(unidad, HIGH);
-      mostrarNumero(contadorU);
-      delay(250);
-      digitalWrite(unidad, LOW);
+      
+      encenderDisplay(contadorU,contadorD, 50);
 
       //contador de unidades
       contadorU++;
-
       //Si el contador de unidades llega a 10 se reinicia a 0
       //y el contador de decenas aumenta en 1.
       //Sino, si el contador de unidades llega a -1 se reinicia a 9
@@ -123,7 +104,6 @@ void loop()
     //Aca es cuando el interruptor vale 0
     else
     {     
-        //Reinicio los contadores del otro valor del interruptor
       contadorU = 0;
       contadorD = 0;
       
@@ -135,10 +115,9 @@ void loop()
 
       if (primo(resultado)) 
       {
-        //Serial.println(resultado);
+        Serial.println(resultado);
         
-		encenderNumeroPrimo(num1, unidad, 400);
-        encenderNumeroPrimo(num2, decena, 600);
+		encenderDisplay(num1,num2, 50);
       }
 
       num1++;
@@ -149,7 +128,27 @@ void loop()
 
     }
 }
-//Funcion para mostrar valores por la consola.
+
+//Funciones
+
+
+void encenderDisplay(int n1,int n2, int tiempo)
+{
+  encenderNumeroPrimo(n1,  unidad, tiempo);
+  encenderNumeroPrimo(n2,  decena, tiempo);
+  
+  encenderNumeroPrimo(n1, unidad, tiempo);
+  encenderNumeroPrimo(n2, decena, tiempo);
+  
+  encenderNumeroPrimo(n1, unidad, tiempo);
+  encenderNumeroPrimo(n2, decena, tiempo);
+  
+  encenderNumeroPrimo(n1, unidad, tiempo);
+  encenderNumeroPrimo(n2, decena, tiempo);
+}
+
+
+// monitoriza la temeperatura
 void monitoriza(int temperaturaActual)
 {
   Serial.print("La temperatura es ...");
@@ -157,10 +156,6 @@ void monitoriza(int temperaturaActual)
   
 }
 
-//Recibe 3 parametros: 
-//numero: num1 o num2, son contadores que se usan para los N primos
-//display: unidad o decena, son los dos displays.
-//tiempo: es el valor numerico que pones en el delay de C/display.
 void encenderNumeroPrimo(int numero, int display, int tiempo)
 {
   apagado();
@@ -170,7 +165,7 @@ void encenderNumeroPrimo(int numero, int display, int tiempo)
   digitalWrite(display, LOW);
 }
 
-//Esta funcion retorta true si es primo y false si no lo es.     
+     
 bool primo(int n) 
 {
   bool mensaje = true;

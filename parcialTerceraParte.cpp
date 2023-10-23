@@ -81,25 +81,7 @@ void loop()
       num1=0;
       num2=0;
       
-      //Apaga los led para que no se superpongan
-      //Enciende el display decena(izquierda)
-      //Muestra el numero del contador de decena
-      //y apaga el display
-      apagado();
-      digitalWrite(decena, HIGH);
-      mostrarNumero(contadorD);
-      delay(250);
-      digitalWrite(decena, LOW);
-
-      //Apaga los led para que no se superpongan
-      //Enciende el display unidad(derecha)
-      //Muestra el numero del contador de unidad
-      //y apaga el display
-      apagado();
-      digitalWrite(unidad, HIGH);
-      mostrarNumero(contadorU);
-      delay(250);
-      digitalWrite(unidad, LOW);
+      encenderDisplay(contadorU,contadorD, 50);
 
       //contador de unidades
       contadorU++;
@@ -140,9 +122,7 @@ void loop()
       {
         //Serial.println(resultado);
         
-		encenderNumeroPrimo(num1, unidad, 400);
-        encenderNumeroPrimo(num2, decena, 600);
-        delay(100);
+		encenderDisplay(num1,num2, 50);
       }
 
       num1++;
@@ -154,6 +134,23 @@ void loop()
       delay(100);
     }
 }
+
+
+void encenderDisplay(int n1,int n2, int tiempo)
+{
+  encenderNumeroPrimo(n1,  unidad, tiempo);
+  encenderNumeroPrimo(n2,  decena, tiempo);
+  
+  encenderNumeroPrimo(n1, unidad, tiempo);
+  encenderNumeroPrimo(n2, decena, tiempo);
+  
+  encenderNumeroPrimo(n1, unidad, tiempo);
+  encenderNumeroPrimo(n2, decena, tiempo);
+  
+  encenderNumeroPrimo(n1, unidad, tiempo);
+  encenderNumeroPrimo(n2, decena, tiempo);
+}
+
 
 //Esta funcion enciende el led y el motorCC dependiendo los valores
 // de la fotoresistencia y la temperatura.
