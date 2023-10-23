@@ -16,7 +16,7 @@ El parcial consta de 3 partes:
 
 2. https://www.tinkercad.com/things/gmYg34HPdfb-parte-2-terminada-no-modificar/editel?sharecode=2UNiCOXABAwN-ZOKxM7oiXunLo7DZ5RgbNDiYmv1F8o
 
-3. https://www.tinkercad.com/things/aTajntoqrXm-copy-of-parte-3-final/editel?sharecode=3OfaIihQYPvIkvDDnfv8nYNK0vQV0tvZt4BFiWZM4Bo
+3. https://www.tinkercad.com/things/0iyl9T93ol0-grand-leelo/editel?sharecode=HKYSvqLxL3oM8BiUFM721R43DtytuCPpgTVtO27vACM
 
 ## :sunglasses: Integrantes :
 - Fernandez Juan.
