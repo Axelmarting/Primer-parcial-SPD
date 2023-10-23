@@ -14,7 +14,7 @@ El parcial consta de 3 partes:
 ## :rocket: Links:
 1. https://www.tinkercad.com/things/cLlmi2lZw6H-copy-of-copy-of-primera-parte-linda-funcional/editel?sharecode=FmW87T2f5fJt2iOokDnvFo79VL-orocEnEVvIhtAIyc
 
-2. https://www.tinkercad.com/things/gmYg34HPdfb-parte-2-terminada-no-modificar/editel?sharecode=2UNiCOXABAwN-ZOKxM7oiXunLo7DZ5RgbNDiYmv1F8o
+2. https://www.tinkercad.com/things/6uY65L8YkP5-grand-juttuli/editel?sharecode=dgKF1iLm_wKK_k6jFmm5PjKmf1BfJBDaLHT_TWzvyZQ
 
 3. https://www.tinkercad.com/things/0iyl9T93ol0-grand-leelo/editel?sharecode=HKYSvqLxL3oM8BiUFM721R43DtytuCPpgTVtO27vACM
 
